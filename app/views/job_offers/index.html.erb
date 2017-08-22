@@ -1,15 +1,18 @@
-<h1>job offers <%= @job_offers.count  %></h1>
-
-<% @job_offers.each do |job_offer| %>
- <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://kitt.lewagon.com/placeholder/cities/shanghai');">
-  <div class="card-category">Popular</div>
-  <div class="card-description">
-    <h2><%= job_offer.title %></h2>
-    <p>Very cool city, the best</p>
+<h2>job offers (<%= @job_offers.count  %>)</h2>
+<div class="container">
+  <div class="row">
+    <% @job_offers.each do |job_offer| %>
+      <div class="col-xs-12 col-md-4" >
+        <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://kitt.lewagon.com/placeholder/cities/shanghai');">
+          <div class="card-category"><%=job_offer.company.name%></div>
+          <div class="card-description">
+            <h2><%= job_offer.title %></h2>
+            <p>Very cool city, the best</p>
+          </div>
+          <%= image_tag job_offer.company.picture, {class: "card-user"}%>
+          <a class="card-link" href="#" ></a>
+        </div>
+      </div>
+    <% end %>
   </div>
-  <img class="card-user" src="https://kitt.lewagon.com/placeholder/users/tgenaitay">
-  <a class="card-link" href="#" ></a>
 </div>
-
-
-<% end %>
