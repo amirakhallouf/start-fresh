@@ -4,13 +4,13 @@
     <% @job_offers.each do |job_offer| %>
       <div class="col-xs-12 col-md-4" >
         <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://kitt.lewagon.com/placeholder/cities/shanghai');">
-          <div class="card-category"><%=job_offer.company.name%></div>
+          <div class="card-category"><%=job_offer.company.name[0,25] %></div>
           <div class="card-description">
             <h2><%= job_offer.title %></h2>
-            <p><%= job_offer.description %></p>
+            <p><%= job_offer.description[0,50] %></p>
           </div>
           <%= image_tag job_offer.company.picture, {class: "card-user"}%>
-          <a class="card-link" href="#" ></a>
+          <%= link_to "",job_offer,class: "card-link"%>
         </div>
       </div>
     <% end %>
