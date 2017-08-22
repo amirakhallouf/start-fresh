@@ -7,7 +7,7 @@
           <div class="card-category"><%=job_offer.company.name%></div>
           <div class="card-description">
             <h2><%= job_offer.title %></h2>
-            <p>Very cool city, the best</p>
+            <p><%= job_offer.description %></p>
           </div>
           <%= image_tag job_offer.company.picture, {class: "card-user"}%>
           <a class="card-link" href="#" ></a>
@@ -16,3 +16,4 @@
     <% end %>
   </div>
 </div>
+
