@@ -1,19 +1,25 @@
+  <div class="banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('https://kitt.lewagon.com/placeholder/cities/berlin');">
+    <div class="banner-content">
 
-<div class="container">
-<div class="wrap">
+      <p>Learn to code with us in Berlin</p>
 
-   <div class="search">
 
-     <form action="job_offers">
-        <input type="text" class="searchTerm" placeholder="Job offers" name="search">
-        <button  type="submit" class="searchButton">
-          <i class="fa fa-search"></i>
-       </button>
-      </form>
+  <div class="container">
+  <div class="wrap">
+
+     <div class="search">
+
+       <form action="job_offers">
+          <input type="text" class="searchTerm" placeholder="Job offers" name="search">
+          <button  type="submit" class="searchButton">
+            <i class="fa fa-search"></i>
+         </button>
+        </form>
+     </div>
+    </div>
+  </div>
    </div>
   </div>
-</div>
-
 <div class="container">
   <% @job_offers.each do |job_offer| %>
     <%= render "job_offers/job_offer_card", job_offer: job_offer %>
