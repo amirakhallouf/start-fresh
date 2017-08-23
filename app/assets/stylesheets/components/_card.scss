@@ -1,11 +1,22 @@
 .card {
   height: 175px;
-  text-shadow: 0 1px 3px rgba(0,0,0,0.6);
+
   background-size: cover !important;
   background-position: center;
-  color: white;
+  color:#23395B;
   position: relative;
-  margin-top: 10px;
+  margin-top: 30px;
+  background-color:white;
+  border: 2px solid;
+  border-radius: 5px;
+  border-color: white;
+  text-transform:width 1s;
+
+}
+.card:hover
+{
+  width:104%;
+ margin-left: -10px;
 }
 .card-user {
   position: absolute;
@@ -20,14 +31,18 @@
   left: 10px;
   font-size: 15px;
   text-transform: uppercase;
+
 }
+
 .card-description {
   position: absolute;
   bottom: 10px;
   left: 10px;
+
 }
 .card-description h2 {
   font-size: 24px;
+  color:#ff715B;
 }
 .card-description p {
   font-size: 14px;
