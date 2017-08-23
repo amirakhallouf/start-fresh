@@ -1,0 +1,6 @@
+<h1>new job application for <%= current_user.email  %></h1>
+
+<%= simple_form_for [@job_offer, @job_application] do |f| %>
+  <%= f.input :personal_motivation %>
+  <%= f.button :submit %>
+<% end %>
