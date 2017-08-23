@@ -1,11 +1,9 @@
-<!DOCTYPE html>
-<html>
-<head>
 
-</head>
-<body>
+<div class="container">
 <div class="wrap">
+
    <div class="search">
+
      <form action="job_offers">
         <input type="text" class="searchTerm" placeholder="Job offers" name="search">
         <button  type="submit" class="searchButton">
@@ -13,7 +11,13 @@
        </button>
       </form>
    </div>
+  </div>
 </div>
 
-</body>
-</html>
+<div class="container">
+  <% @job_offers.each do |job_offer| %>
+    <%= render "job_offers/job_offer_card", job_offer: job_offer %>
+  <% end %>
+</div>
+
+
