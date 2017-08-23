@@ -1,0 +1,17 @@
+
+  <%= image_tag @company.picture, width: 150 %>
+  <h1><%= @company.name %></h1>
+  <p> <%= @company.email %></p>
+<div>
+<p> Post a Job Offer</p>
+  <div class="text-center">
+    <%= simple_form_for [@company, @company.job_offers.new] do |f| %>
+    <%= f.error_notification %>
+    <%= f.input :title %>
+    <%= f.input :description %>
+    <%= f.input :location %>
+    <%= f.button :submit, class: "btn btn-success" %>
+    <%= link_to "Get", job_offer %>
+    <% end %>
+    </div>
+</center>
