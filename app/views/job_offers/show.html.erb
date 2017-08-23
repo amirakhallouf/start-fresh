@@ -1,14 +1,30 @@
-<h1> job offers (<%= @job_offer.title  %>)</h1>
+<div class="container">
+  <div id="title" class="content">
+    <%= image_tag @job_offer.company.picture %>
+    <p><%= @job_offer.company.name %></p>
+    <h1><%= @job_offer.title %></h1>
+  </div>
 
-<%= @job_offer.title %>
-<%= @job_offer.location %>
-<%= @job_offer.description %>
+  <div id="location" class="content">
+    <p><strong>Location: </strong><%= @job_offer.location %></p>
+  </div>
 
-<% unless @job_offer.job_applications.find_by(user: current_user).nil?  %>
-  <strong>HRREEEEEYYY</strong>
-  <%= @job_offer.job_applications.find_by(user: current_user).status %>
-  <strong> <%= @job_offer.job_applications.find_by(user: current_user).personal_motivation %></strong>
-<% end %>
+  <div id="apply-button" class="content">
+    <% if @job_offer.job_applications.find_by(user: current_user).nil? %>
+    <%= link_to "Apply", new_job_offer_job_application_path(@job_offer) %>
+    <% end %>
+  </div>
 
-<%= link_to "Apply", new_job_offer_job_application_path(@job_offer) %>
+  <div id="description" class="content">
+    <%= @job_offer.description %>
+  </div>
 
+  <div id="application" class="content">
+    <% unless @job_offer.job_applications.find_by(user: current_user).nil? %>
+    <p id="applied">You have already applied to this job offer.</p>
+    <p><strong>Status of your application: </strong>
+    <%= @job_offer.job_applications.find_by(user: current_user).status %></p>
+    <p><strong>Your personal motivation: </strong><%= @job_offer.job_applications.find_by(user: current_user).personal_motivation %></p>
+    <% end %>
+  </div>
+</div>
