@@ -9,16 +9,20 @@
 
     <% if user_signed_in? %>
 
-      <!-- Links when logged in -->
-      <%= link_to "Host", "#", class: "navbar-wagon-item navbar-wagon-link" %>
-      <%= link_to "Trips", "#", class: "navbar-wagon-item navbar-wagon-link" %>
-      <%= link_to "Messages", "#", class: "navbar-wagon-item navbar-wagon-link" %>
+      <!-- Links when user is logged in -->
+      <%= link_to "ABOUT", "#", class: "navbar-wagon-item navbar-wagon-link" %>
+      <%= link_to "NEWS", "#", class: "navbar-wagon-item navbar-wagon-link" %>
+      <%= link_to "COMPANIES", "#", class: "navbar-wagon-item navbar-wagon-link" %>
 
 
       <!-- Avatar with dropdown menu -->
       <div class="navbar-wagon-item">
         <div class="dropdown">
-          <%= image_tag "http://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar dropdown-toggle", id: "navbar-wagon-menu", "data-toggle" => "dropdown" %>
+          <% if current_user.picture.nil? %>
+            <%= image_tag "http://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar dropdown-toggle", id: "navbar-wagon-menu", "data-toggle" => "dropdown" %>
+          <% else %>
+            <%= image_tag current_user.picture %>
+          <% end %>
           <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
             <li>
               <%= link_to "#" do %>
@@ -38,27 +42,67 @@
           </ul>
         </div>
       </div>
+    <% elsif company_signed_in? %>
+
+    <!-- Links when company is logged in -->
+    <%= link_to "ABOUT", "#", class: "navbar-wagon-item navbar-wagon-link" %>
+    <%= link_to "NEWS", "#", class: "navbar-wagon-item navbar-wagon-link" %>
+
+    <!-- Avatar with dropdown menu -->
+    <div class="navbar-wagon-item">
+      <div class="dropdown">
+        <% if current_company.picture.nil? %>
+          <%= image_tag "http://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar dropdown-toggle", id: "navbar-wagon-menu", "data-toggle" => "dropdown" %>
+        <% else %>
+          <%= image_tag current_company.picture %>
+        <% end %>
+        <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
+          <li>
+            <%= link_to "#" do %>
+              <i class="fa fa-user"></i> <%= t(".profile", default: "Profile") %>
+            <% end %>
+          </li>
+          <li>
+            <%= link_to "#" do %>
+              <i class="fa fa-home"></i>  <%= t(".profile", default: "Home") %>
+            <% end %>
+          </li>
+          <li>
+            <%= link_to destroy_company_session_path, method: :delete do %>
+              <i class="fa fa-sign-out"></i>  <%= t(".sign_out", default: "Log out") %>
+            <% end %>
+          </li>
+        </ul>
+      </div>
+    </div>
     <% else %>
       <!-- Login link (when logged out) -->
       <div class="dropdown">
 
-          <%= image_tag "http://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar dropdown-toggle", id: "navbar-wagon-menu", "data-toggle" => "dropdown" %>
+        <%= simple_format "SIGN UP", class: "avatar dropdown-toggle", id: "navbar-wagon-menu", "data-toggle" => "dropdown" %>
 
-          <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
-            <li>
-              <%= link_to "..as a company", new_company_registration_path, class: "navbar-wagon-item navbar-wagon-link" %>
-            </li>
-            <li>
-              <%= link_to "..as a user", new_user_registration_path, class: "navbar-wagon-item navbar-wagon-link" %>
-            </li>
-            <li>
-              <%= link_to destroy_user_session_path, method: :delete do %>
-                <i class="fa fa-sign-out"></i>  <%= t(".sign_out", default: "Log out") %>
-              <% end %>
-            </li>
-          </ul>
-        </div>
+        <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
+          <li>
+            <%= link_to "As a user", new_user_registration_path, class: "navbar-wagon-item navbar-wagon-link" %>
+          </li>
+          <li>
+            <%= link_to "As a company", new_company_registration_path, class: "navbar-wagon-item navbar-wagon-link" %>
+          </li>
+        </ul>
+      </div>
+      <div class="dropdown">
 
+        <%= simple_format "SIGN IN", class: "avatar dropdown-toggle", id: "navbar-wagon-menu", "data-toggle" => "dropdown" %>
+
+        <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
+          <li>
+            <%= link_to "As a user", new_user_session_path, class: "navbar-wagon-item navbar-wagon-link" %>
+          </li>
+          <li>
+            <%= link_to "As a company", new_company_session_path, class: "navbar-wagon-item navbar-wagon-link" %>
+          </li>
+        </ul>
+      </div>
     <% end %>
   </div>
 
