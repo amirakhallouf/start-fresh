@@ -1,13 +1,19 @@
-
+<% unless controller_name == 'users' %>
   <div class="col-xs-12 col-md-4" >
+<% end %>
     <div class="card">
       <div class="card-category"><%=job_offer.company.name[0,25] %></div>
       <div class="card-description">
         <h2><%= job_offer.title %></h2>
         <p><%= job_offer.description[0,50] %></p>
+        <% if controller_name == 'users' %>
+          <p><%= application.status %></p>
+          <p><%= application.personal_motivation %></p>
+        <% end %>
       </div>
       <%= image_tag job_offer.company.picture, {class: "card-user"}%>
       <%= link_to "",job_offer,class: "card-link"%>
     </div>
-  </div>
-
+<% unless controller_name == 'users' %>
+</div>
+<% end %>
