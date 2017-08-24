@@ -7,13 +7,17 @@ div .content {
 #applied {
   color: red;
 }
-// h1 {
-//   text-color: #23395B;
-// }
 
+#title h1 {
+   color: red;
+ }
+
+.text-justify {
+  text-align: justify;
+}
 
 #title p {
-  color: #FF715B;
+  color: blue;
 }
 .style_image {
   border-bottom: 10px solid #000; width: 204px;
