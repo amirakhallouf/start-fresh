@@ -1,8 +1,37 @@
 div .content {
-  border: 1px solid;
+  // border: 1px solid;
   margin-bottom: 20px;
+  text-transform: center;
 }
 
 #applied {
   color: red;
+}
+// h1 {
+//   text-color: #23395B;
+// }
+
+
+#title p {
+  color: #FF715B;
+}
+.style_image {
+  border-bottom: 10px solid #000; width: 204px;
+    height: 65px;
+    margin: 56px auto 48px;
+}
+
+#job-application-modal {
+  width: 85vw;
+  height: 80vh;
+  margin: 10vh auto;
+  background: white;
+  .modal-dialog {
+    height: 100%;
+    width: 100%;
+    .modal-content {
+      height: 100%;
+      margin: 0;
+    }
+  }
 }
