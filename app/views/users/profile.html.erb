@@ -1,17 +1,17 @@
 <div class="container">
   <%= render 'tabs' %>
-
-    <h4>Email: <%= @user.email %></h4>
-    <h4>Name: <%= @user.name %></h4>
-    <h4>Location:<%= @user.location %></h4>
+  <br>
+    <h4><strong>Email:</strong> <%= @user.email %></h4>
+    <h4><strong>Name:</strong> <%= @user.name %></h4>
+    <h4><strong>Location:</strong> <%= @user.location %></h4>
     <h4><%= @user.picture %></h4>
-    <h4>Education:<%= @user.education %></h4>
-    <h4>Nationality:<%= @user.nationality %></h4>
-    <h4>Skills:<%= @user.skills %></h4>
-    <h4>Short Bio:<%= @user.bio %></h4>
+    <h4><strong>Education:</strong> <%= @user.education %></h4>
+    <h4><strong>Nationality:</strong> <%= @user.nationality %></h4>
+    <h4><strong>Skills:</strong> <%= @user.skills %></h4>
+    <h4><strong>Short Bio:</strong> <%= @user.bio %></h4>
 
 
-  <%= link_to "edit", edit_user_registration_path, class: "btn btn-success"  %>
+  <%= link_to "Edit Here", edit_user_registration_path, class: "btn btn-success"  %>
 </div>
 
 
