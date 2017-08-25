@@ -1,3 +1,4 @@
+
 <h2>job offers (<%= @job_offers.count  %>)</h2>
 <div class="container">
   <div class="row">
@@ -6,4 +7,12 @@
     <% end %>
   </div>
 </div>
-
+<div class="container"> <div class="search">
+       <form action="job_offers">
+          <input type="text" class="searchTerm" placeholder="Search job offers" name="search">
+          <button  type="submit" class="searchButton">
+            <i class="fa fa-search"></i>
+          </button>
+        </form>
+      </div>
+</div>
