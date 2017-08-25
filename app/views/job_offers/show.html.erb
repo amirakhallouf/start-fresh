@@ -2,7 +2,9 @@
   <div class="row">
     <div class="col-md-6 col-md-offset-3 text-center">
       <div id="title" class="content">
+      <% unless @job_offer.company.picture.nil? %>
         <%= image_tag @job_offer.company.picture,:class => "style_image"%>
+        <% end %>
         <br/>
         <p><%= @job_offer.company.name %></p>
         <h1><%= @job_offer.title %></h1>
