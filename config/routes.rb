@@ -7,6 +7,8 @@ Rails.application.routes.draw do
     resources :job_offers, only: [:index, :new, :create]
   end
   get 'profile', to: 'users#profile', as: :profile
+  get 'my_job_applications', to: 'users#job_applications', as: :user_job_applications
+
   resources :job_offers, only: [:index, :show] do
     resources :job_applications, only: [:index, :new, :create]
   end

@@ -1,0 +1,8 @@
+<ul class="nav nav-tabs">
+  <li class="nav-item">
+    <%= link_to "My Profile", profile_path, class: "nav-link #{'active' if action_name == "profile"}" %>
+  </li>
+  <li class="nav-item">
+    <%= link_to "My Job Applications", user_job_applications_path, class: "nav-link #{'active' if action_name == "job_applications"}" %>
+  </li>
+</ul>

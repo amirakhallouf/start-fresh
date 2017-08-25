@@ -21,6 +21,11 @@ div .content {
   text-align: justify;
 }
 
+
+#title p {
+  color: $blue;
+}
+
 .style_image {
   border-bottom: 1px solid $blue; width: 204px;
   padding-bottom: 3px;
