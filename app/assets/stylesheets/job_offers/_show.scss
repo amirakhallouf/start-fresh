@@ -9,7 +9,7 @@ div .content {
 }
 
 #title h1 {
-   color: red;
+   color: $red;
  }
 
 .text-justify {
@@ -17,7 +17,7 @@ div .content {
 }
 
 #title p {
-  color: blue;
+  color: $blue;
 }
 .style_image {
   border-bottom: 10px solid #000; width: 204px;

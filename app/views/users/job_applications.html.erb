@@ -1,0 +1,9 @@
+<div class="container">
+  <%= render 'tabs' %>
+  <h1><%= @user.email %></h1>
+  <% @applications.each do |application| %>
+  <div class="col-xs-12">
+    <%= render 'job_offers/job_offer_card', application: application, job_offer: application.job_offer %>
+  </div>
+  <% end %>
+</div>

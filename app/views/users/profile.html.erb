@@ -1,9 +1,17 @@
 <div class="container">
-  <h1><%= @user.email %></h1>
-  <% @applications.each do |application| %>
-  <div class="col-xs-12">
-    <%= render 'job_offers/job_offer_card', application: application, job_offer: application.job_offer %>
-  </div>
-  <% end %>
+  <%= render 'tabs' %>
 
+    <h4>Email: <%= @user.email %></h4>
+    <h4>Name: <%= @user.name %></h4>
+    <h4>Location:<%= @user.location %></h4>
+    <h4><%= @user.picture %></h4>
+    <h4>Education:<%= @user.education %></h4>
+    <h4>Nationality:<%= @user.nationality %></h4>
+    <h4>Skills:<%= @user.skills %></h4>
+    <h4>Short Bio:<%= @user.bio %></h4>
+
+
+  <%= link_to "edit", edit_user_registration_path, class: "btn btn-success"  %>
 </div>
+
+
