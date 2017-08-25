@@ -1,6 +1,6 @@
 div .content {
   // border: 1px solid;
-  margin-bottom: 20px;
+  margin-bottom: 50px;
   text-transform: center;
 }
 
@@ -9,20 +9,23 @@ div .content {
 }
 
 #title h1 {
-   color: red;
+   color: $red;
  }
+
+#title p {
+  color: $blue;
+  font-weight: bold;
+}
 
 .text-justify {
   text-align: justify;
 }
 
-#title p {
-  color: blue;
-}
 .style_image {
-  border-bottom: 10px solid #000; width: 204px;
-    height: 65px;
-    margin: 56px auto 48px;
+  border-bottom: 1px solid $blue; width: 204px;
+  padding-bottom: 3px;
+  height: 65px;
+  margin: 70px auto 20px
 }
 
 #job-application-modal {
