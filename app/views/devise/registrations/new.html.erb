@@ -4,11 +4,14 @@
   <%= f.error_notification %>
 
   <div class="form-inputs">
-    <%= f.input :name, required: true, autofocus: true %>
-    <%= f.input :location, autofocus: true %>
+  <% if resource_name == :user %>
     <%= f.input :skills, autofocus: true %>
     <%= f.input :education, autofocus: true %>
     <%= f.input :nationality, autofocus: true %>
+  <% end %>
+    <%= f.input :name, required: true, autofocus: true %>
+    <%= f.input :location, autofocus: true %>
+
     <%= f.input :picture, autofocus: true %>
 
     <%= f.input :email, required: true, autofocus: true %>
