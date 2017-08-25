@@ -5,11 +5,11 @@
 
   <div class="form-inputs">
     <%= f.input :name, required: true, autofocus: true %>
-    <%= f.input :location, required: true, autofocus: true %>
-    <%= f.input :skills, required: true, autofocus: true %>
-    <%= f.input :education, required: true, autofocus: true %>
-    <%= f.input :nationality, required: true, autofocus: true %>
-    <%= f.input :picture, required: true, autofocus: true %>
+    <%= f.input :location, autofocus: true %>
+    <%= f.input :skills, autofocus: true %>
+    <%= f.input :education, autofocus: true %>
+    <%= f.input :nationality, autofocus: true %>
+    <%= f.input :picture, autofocus: true %>
 
     <%= f.input :email, required: true, autofocus: true %>
     <%= f.input :password, required: true, hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length) %>
