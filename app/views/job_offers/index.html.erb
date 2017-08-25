@@ -1,8 +1,23 @@
-<h2>job offers (<%= @job_offers.count  %>)</h2>
 <div class="container">
+  <div class="search">
+    <div class="space_search">
+      <form action="job_offers">
+        <input type="text" class="searchTerm" placeholder="Search job offers" name="search">
+
+        <button  type="submit" class="searchButton2">
+          <i class="fa fa-search"></i>
+        </button>
+
+      </form>
+      <br>
+       <h2><FONT FACE="Impact" SIZE="6" COLOR="#22395b">job offers </FONT>-<FONT FACE="Impact" SIZE="6" COLOR="#FF715B"> <%= @job_offers.count  %> </FONT>-</h2>
+
+    </div>
+  </div>
+
   <div class="row">
     <% @job_offers.each do |job_offer| %>
-      <%= render "job_offers/job_offer_card", job_offer: job_offer %>
+    <%= render "job_offers/job_offer_card", job_offer: job_offer %>
     <% end %>
   </div>
 </div>

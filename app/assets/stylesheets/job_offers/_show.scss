@@ -1,6 +1,6 @@
 div .content {
   // border: 1px solid;
-  margin-bottom: 20px;
+  margin-bottom: 50px;
   text-transform: center;
 }
 
@@ -12,17 +12,25 @@ div .content {
    color: $red;
  }
 
+#title p {
+  color: $blue;
+  font-weight: bold;
+}
+
 .text-justify {
   text-align: justify;
 }
 
+
 #title p {
   color: $blue;
 }
+
 .style_image {
-  border-bottom: 10px solid #000; width: 204px;
-    height: 65px;
-    margin: 56px auto 48px;
+  border-bottom: 1px solid $blue; width: 204px;
+  padding-bottom: 3px;
+  height: 65px;
+  margin: 70px auto 20px
 }
 
 #job-application-modal {
@@ -38,4 +46,33 @@ div .content {
       margin: 0;
     }
   }
+}
+.space_search
+{
+  margin: 80px;
+}
+h2
+{
+  text-align:center;
+
+}
+.searchButton2
+{
+margin-right: 70px;
+position: absolute;
+  right: -50px;
+  width: 80px;
+  height: 36px;
+  border: 2px solid #1Ea896;
+  background: #1Ea896;
+  text-align: center;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 20px;
+
+}
+.searchButton2:hover
+{
+  background: #04B486;
 }

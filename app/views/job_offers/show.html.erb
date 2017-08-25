@@ -2,7 +2,9 @@
   <div class="row">
     <div class="col-md-6 col-md-offset-3 text-center">
       <div id="title" class="content">
+      <% unless @job_offer.company.picture.nil? %>
         <%= image_tag @job_offer.company.picture,:class => "style_image"%>
+        <% end %>
         <br/>
         <p><%= @job_offer.company.name %></p>
         <h1><%= @job_offer.title %></h1>
@@ -16,7 +18,7 @@
         <% if @job_offer.job_applications.find_by(user: current_user).nil? %>
 
           <!-- Link to modal -->
-          <%= link_to "APLLY FOR THIS JOB OFFER", new_job_offer_job_application_path(@job_offer), remote: true, class: "btn btn-success" %>
+          <%= link_to "APPLY TO THIS JOB OFFER", new_job_offer_job_application_path(@job_offer), remote: true, class: "btn btn-success" %>
         <% end %>
 
       </div>
