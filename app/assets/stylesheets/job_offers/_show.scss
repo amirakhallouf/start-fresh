@@ -39,3 +39,32 @@ div .content {
     }
   }
 }
+.space_search
+{
+  margin: 80px;
+}
+h2
+{
+  text-align:center;
+
+}
+.searchButton2
+{
+margin-right: 70px;
+position: absolute;
+  right: -50px;
+  width: 80px;
+  height: 36px;
+  border: 2px solid #1Ea896;
+  background: #1Ea896;
+  text-align: center;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 20px;
+
+}
+.searchButton2:hover
+{
+  background: #04B486;
+}
