@@ -6,6 +6,7 @@ class JobOffersController < ApplicationController
       @job_offers = @job_offers.where("title ILIKE ?",'%'+params[:search]+'%')
     end
   end
+
   def show
     @job_offer = JobOffer.find(params[:id])
     @job_applications = @job_offer.job_applications

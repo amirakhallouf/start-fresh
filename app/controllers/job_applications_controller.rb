@@ -4,6 +4,10 @@ class JobApplicationsController < ApplicationController
     @job_applications = JobApplication.all
   end
 
+  def show
+    @job_application = JobApplication.find(params[:id])
+  end
+
   def new
     @job_application = JobApplication.new
     @job_offer = JobOffer.find(params[:job_offer_id])
