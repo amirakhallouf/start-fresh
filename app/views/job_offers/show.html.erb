@@ -14,13 +14,19 @@
         <p><strong>Location: </strong><%= @job_offer.location %></p>
       </div>
 
-      <div id="apply-button" class="content">
-        <% if @job_offer.job_applications.find_by(user: current_user).nil? %>
+      <div id="buttons" class="content">
+        <% if user_signed_in? %>
+          <% if @job_offer.job_applications.find_by(user: current_user).nil? %>
 
-          <!-- Link to modal -->
-          <%= link_to "APPLY TO THIS JOB OFFER", new_job_offer_job_application_path(@job_offer), remote: true, class: "btn btn-success" %>
+            <!-- Link to modal -->
+            <%= link_to "APPLY TO THIS JOB OFFER", new_job_offer_job_application_path(@job_offer), remote: true, class: "btn btn-success" %>
+          <% end %>
+        <% elsif company_signed_in? && @job_offer.company_id == current_company.id %>
+          <%= link_to "Edit", "", remote: true, class: "btn btn-success" %>
+          <%= link_to "Close", "", remote: true, class: "btn btn-info" %>
+          <%= link_to "Remove", "", remote: true, class: "btn btn-warning" %>
         <% end %>
-
+        <%= link_to "Share on Facebook","", remote: true, class: "btn btn-primary" %>
       </div>
 
       <div id="description" class="content">

@@ -17,13 +17,13 @@ div .content {
   font-weight: bold;
 }
 
-.text-justify {
-  text-align: justify;
+#buttons {
+  display: flex;
+  justify-content: space-evenly;
 }
 
-
-#title p {
-  color: $blue;
+.text-justify {
+  text-align: justify;
 }
 
 .style_image {
@@ -47,14 +47,13 @@ div .content {
     }
   }
 }
-.space_search
+
+/* .space_search
 {
   margin: 80px;
 }
-h2
-{
+h2 {
   text-align:center;
-
 }
 .searchButton2
 {
@@ -80,4 +79,4 @@ position: absolute;
 {
   padding: 50px;
   color :#1Ea896
-}
+} */
