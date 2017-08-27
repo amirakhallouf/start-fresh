@@ -35,16 +35,19 @@
       </div>
 
       <div id="application" class="content">
-        <% unless @job_offer.job_applications.find_by(user: current_user).nil? %>
-        <p id="applied">You have already applied to this job offer.</p>
-        <p><strong>Status of your application: </strong>
-          <%= @job_offer.job_applications.find_by(user: current_user).status %></p>
-          <p><strong>Your personal motivation: </strong><%= @job_offer.job_applications.find_by(user: current_user).personal_motivation %></p>
+        <% if user_signed_in? %>
+          <% unless @job_offer.job_applications.find_by(user: current_user).nil? %>
+          <p id="applied">You have already applied to this job offer.</p>
+          <p><strong>Status of your application: </strong>
+            <%= @job_offer.job_applications.find_by(user: current_user).status %></p>
+            <p><strong>Your personal motivation: </strong><%= @job_offer.job_applications.find_by(user: current_user).personal_motivation %></p>
+            <% end %>
+          <% elsif company_signed_in? && @job_offer.company_id == current_company.id %>
+
           <% end %>
         </div>
       </div>
     </div>
-
   </div>
 
 
