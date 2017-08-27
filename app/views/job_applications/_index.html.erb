@@ -1,0 +1,6 @@
+<h3>Your current applicants: </h3>
+<% @job_applications.each do |job_application| %>
+<div>
+  <%= render 'job_applications/job_application_card', job_application: job_application, job_offer: job_application.job_offer %>
+</div>
+<% end %>

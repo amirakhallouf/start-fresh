@@ -43,7 +43,7 @@
             <p><strong>Your personal motivation: </strong><%= @job_offer.job_applications.find_by(user: current_user).personal_motivation %></p>
             <% end %>
           <% elsif company_signed_in? && @job_offer.company_id == current_company.id %>
-
+            <%= render "job_applications/index" %>
           <% end %>
         </div>
       </div>
