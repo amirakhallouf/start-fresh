@@ -1,5 +1,17 @@
 // Specific CSS for your home-page
 .banner {
+  text-align: center;
+  padding: 20px;
+  margin: 50px;
+  line-height: 150%;
+}
+/* .banner img {
+    height: 100px;
+  } */
+.banner h1 {
+  color: $yellow;
+}
+.quote {
   color: white;
   text-align: center;
   height: 70vh;
@@ -12,12 +24,12 @@
   margin-bottom:40px;
   min-height: 210px;
 }
-.banner h1 {
+.quote h1 {
   font-size: 50px;
   font-weight: bold;
   text-shadow: 0px 1px rgba(0, 0, 0, 0.2);
 }
-.banner p {
+.quote p {
   margin-bottom: 40px;
   font-size: 25px;
   font-weight: lighter;
@@ -28,15 +40,14 @@
   text-shadow: 1px 1px black;
 
 }
-body
-{
-background-color: white;
-padding-bottom:50px;
+
+body {
+  background-color: white;
+  padding-bottom:50px;
 }
 
 .agenda-card {
   border-top: 40px;
-
 }
 
 .agenda-body img{
@@ -46,8 +57,8 @@ padding-bottom:50px;
 }
 
 
- .agenda-wrapper {
-    padding-top: 125px;
+.agenda-wrapper {
+  padding-top: 125px;
 }
 
 .agenda-wrapper {
@@ -63,18 +74,13 @@ padding-bottom:50px;
 }
 
 * {
-    box-sizing: border-box;
-    box-sizing: border-box;
+  box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 div {
     display: block;
 }
-
-
-
-
-
 
 .agenda-wrapper h2 {
     position: relative;
@@ -133,8 +139,8 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 }
 
 * {
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 h2 {
