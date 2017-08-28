@@ -3,9 +3,7 @@ Rails.application.routes.draw do
   devise_for :users
   root to: 'pages#home'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-  resources :companies, only: [:show] do
-    resources :job_offers, only: [:index, :new, :create]
-  end
+  resources :job_offers, only: [:new, :create]
 
   get 'job_search', to: 'pages#job_search', as: :job_search
   get 'profile', to: 'users#profile', as: :profile

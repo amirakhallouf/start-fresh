@@ -48,7 +48,7 @@
     <% elsif company_signed_in? %>
 
     <!-- Links when company is logged in -->
-    <%= link_to "Create Job Offer", new_company_job_offer_path(current_company), remote: true, class: "btn btn-danger" %>
+    <%= link_to "Create Job Offer", new_job_offer_path, remote: true, class: "btn btn-danger" %>
 
     <!-- Avatar with dropdown menu -->
     <div class="navbar-wagon-item">
