@@ -6,6 +6,10 @@ class PagesController < ApplicationController
     @job_offers = JobOffer.all
   end
 
+  def job_search
+    @job_offers = JobOffer.all
+  end
+
   def about
   end
 
