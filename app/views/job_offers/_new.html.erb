@@ -1,6 +1,6 @@
   <font  color="#FF715B"><h2> New job offer </h2></font>
   <div class ="new_offer">
-  <%= simple_form_for [current_company, @job_offer] do |f| %>
+  <%= simple_form_for @job_offer do |f| %>
     <%= f.input :title %>
     <%= f.input :location %>
     <%= f.input :description %>

@@ -1,2 +1,6 @@
-$(".modal-content").html('<%= j render "job_offers/new" %>');
-$(".bs-example-modal-lg").modal("show")
+<% if company_signed_in? %>
+  $(".modal-content").html('<%= j render "job_offers/new" %>');
+  $(".bs-example-modal-lg").modal("show");
+<% else %>
+  window.location.replace('<%= new_company_registration_path %>');
+<% end %>

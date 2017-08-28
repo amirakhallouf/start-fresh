@@ -1,4 +1,5 @@
 class JobOffersController < ApplicationController
+  # before_action :authenticate_company!, only: [:new, :create]
   def index
     @job_offers = JobOffer.all
 
