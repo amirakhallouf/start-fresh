@@ -6,7 +6,12 @@ class UsersController < ApplicationController
   end
 
   def profile
-    @user = current_user
-    @applications = current_user.job_applications
+    # Possible if statement to show users' profiles to companies
+    # if user_signed_in?
+      @user = current_user
+      @applications = current_user.job_applications
+    # elsif company_signed_in?
+    #  User.show
+    #end
   end
 end
