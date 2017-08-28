@@ -4,9 +4,7 @@
     <h2><%= job_application.user.name %></h2>
     <p><%= job_application.personal_motivation %></p>
   </div>
-  <% if job_application.user.picture.nil? %>
-    <img src="http://www.unsplash.it/50/50" class="card-user">
-  <% else %>
+  <% unless job_application.user.picture.nil? %>
     <%= image_tag job_application.user.picture, { class: "card-user"} %>
   <% end %>
   <%= link_to "", job_application_path, class: "card-link"%>

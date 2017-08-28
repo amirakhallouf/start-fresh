@@ -1,6 +1,5 @@
 .card {
   height: 175px;
-
   background-size: cover !important;
   background-position: center;
   color:#23395B;
@@ -19,6 +18,14 @@
  margin-left: -10px;
    box-shadow: 1px 1px #D3D3D3;
 }
+.card-logo {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  width: 40px;
+  border-radius: 50%;
+}
+
 .card-user {
   position: absolute;
   right: 10px;
