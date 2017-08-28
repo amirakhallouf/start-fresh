@@ -33,3 +33,145 @@ body
 background-color: white;
 padding-bottom:50px;
 }
+
+.agenda-card {
+  border-top: 40px;
+
+}
+
+.agenda-body img{
+  height: 50px;
+  width: 40px;
+  border-radius: 100%;
+}
+
+
+ .agenda-wrapper {
+    padding-top: 125px;
+}
+
+.agenda-wrapper {
+    background: white;
+    padding: 60px 0 0;
+}
+
+.container-fluid {
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+* {
+    box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+div {
+    display: block;
+}
+
+
+
+
+
+
+.agenda-wrapper h2 {
+    position: relative;
+    max-width: 1140px;
+    margin: 0 auto;
+    font-size: 30px;
+    font-weight: 900;
+    text-align: center;
+    background-color: #fff;
+}
+
+.section-title-home {
+    height: auto;
+    border: none;
+}
+
+.section-title-home {
+    font-size: 30px;
+}
+
+.section-title-home {
+    text-align: center;
+    font-size: 30px;
+    font-weight: 900;
+    letter-spacing: -2px;
+    border-bottom: 1px solid #E0E0E0;
+    height: 7px;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 2em 40px 1em 40px;
+    z-index: 1;
+}
+
+h2, .h2 {
+    font-size: 34px;
+}
+
+h1, .h1, h2, .h2, h3, .h3 {
+    margin-top: 22px;
+    margin-bottom: 11px;
+}
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+
+    font-weight: 500;
+    line-height: 1.1;
+    color: inherit;
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+h2 {
+    display: block;
+    font-size: 1.5em;
+    -webkit-margin-before: 0.83em;
+    -webkit-margin-after: 0.83em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    font-weight: bold;
+}
+
+body {
+    font-family: "Avenir", "Helvetica", "sans-serif";
+    font-size: 16px;
+    line-height: 1.4;
+    color: #333333;
+    background-color: white;
+}
+
+html {
+    font-size: 10px;
+    -webkit-tap-highlight-color: transparent;
+}
+
+html {
+    font-family: sans-serif;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+*:before, *:after {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+*:before, *:after {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
