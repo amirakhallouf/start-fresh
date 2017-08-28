@@ -1,0 +1,64 @@
+<div class="container">
+
+      <!-- Portfolio Item Heading -->
+      <h1 class="my-4"> <%= @user.name %>
+        <!-- <small>Secondary Text</small> -->
+      </h1>
+
+      <!-- Portfolio Item Row -->
+      <div class="row">
+
+        <div class="col-md-8">
+        <%= cl_image_tag @user.picture, height: 300, width: 400, crop: :fill %>
+        </div>
+
+        <div class="col-md-4">
+          <h3 class="my-3">Tag Line</h3>
+          <p>"Don't give me a fish. Teach me how to catch it".</p>
+          <h3 class="my-3">Nationality</h3>
+          <ul><li><%= @user.nationality %></li></ul>
+          <h3 class="my-3">Contact Details</h3>
+          <ul>
+            <li><%= @user.email %></li>
+            <li><%= @user.location %></li>
+            </ul>
+            <h3 class="my-3">Skills & Education</h3>
+            <ul>
+            <li><h4>Skills</h4></li>
+            <%= @user.skills %>
+            <li><h4>Education</h4></li>
+            <%= @user.education %>
+            </ul>
+            <h3 class="my-3">Short Bio</h3>
+             <%= @user.bio %>
+        </div>
+
+      </div>
+      <!-- /.row -->
+
+      <!-- Related Projects Row -->
+      <h3 class="my-4">Attachment</h3>
+
+      <div class="row">
+
+        <div class="col-md-3 col-sm-6 mb-4">
+          <a href="#">
+            <img class="img-fluid" src="http://placehold.it/200x100" alt="">
+          </a>
+        </div>
+
+        <div class="col-md-3 col-sm-6 mb-4">
+          <a href="#">
+            <img class="img-fluid" src="http://placehold.it/200x100" alt="">
+          </a>
+        </div>
+
+        <div class="col-md-3 col-sm-6 mb-4">
+          <a href="#">
+            <img class="img-fluid" src="http://placehold.it/200x100" alt="">
+          </a>
+        </div>
+
+      </div>
+
+    <hr/>

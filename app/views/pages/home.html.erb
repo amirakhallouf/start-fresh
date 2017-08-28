@@ -18,19 +18,9 @@
         <div class="col-xs-12">
           <p>"IN WATER, THERE IS NO DIFFERENCE IF YOU'RE A REFUGEE OR SYRIAN OR GERMAN"-Yusra Mardini</p>
         </div>
-    <!-- <div class="col-xs-12">
-      <div class="search">
-        <form action="job_offers">
-          <input type="text" class="searchTerm" placeholder="Search job offers" name="search">
-          <button  type="submit" class="searchButton">
-            <i class="fa fa-search"></i>
-          </button>
-        </form>
       </div>
-    </div> -->
+    </div>
   </div>
-</div>
-</div>
 </div>
 
 <div class="writings-inside-quote">
@@ -65,21 +55,10 @@
 
 
 <div class="quote" style="width:67%">
-
   <div><%= image_tag "factmag-logo.jpg", style: "width:40%;"%></div>
   <p>In many host countries, the legal status of refugees is insecure and does not permit their social inclusion and access to employment and entrepreneurship. </p>
+  </div>
 </div>
-</div>
-
-
-
-
-
-
-
-
-
-
 
 <div class="container-fluid DOTACCESS-wrapper">
   <h2 class="section-title-home" style="font-size:30px;">
@@ -106,22 +85,7 @@
           <p style="text-align: left;"><strong style="color: #FDB631">.access: </strong> aims at launching an Association for Forced Migartion Workforce that will regulate and monitor the access of its members to job markets.</p>
         </div>
       </div>
-
-
     </div>
-
-  </div>
-
-
-
-
-
-  <div class="container">
-    <% @job_offers[0...9].each do |job_offer| %>
-
-    <%= render "job_offers/job_offer_card", job_offer: job_offer %>
-
-    <% end %>
   </div>
 
   <!-- Large modal -->
