@@ -1,3 +1,13 @@
 <div class="container">
-  <h1>#Job Application#</h1>
+  <div class="app-red">
+    <h3><%= @job_application.user.name %>'s application for '<%= @job_application.job_offer.title %>'</h3>
+  </div>
+  <div id="personal-motivation" class="padded">
+    <h4>Personal Motivation:</h4>
+    <p><%= @job_application.personal_motivation %></p>
+  </div>
+  <div class="profile">
+    <%= render 'users/show_profile' %>
+  </div>
+
 </div>
