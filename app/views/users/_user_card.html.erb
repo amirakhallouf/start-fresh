@@ -1,0 +1,15 @@
+  <div class="col-xs-12 col-md-4" >
+    <div class="card">
+      <div class="card-category"><%=user.name %></div>
+      <div class="card-description">
+        <h2><%= user.tag_line %></h2>
+      </div>
+
+      <% if user.picture.nil? %>
+        <% user.picture = "http://www.unsplash.it/50/50" %>
+      <% end %>
+
+      <%= image_tag user.picture, {class: "card-user" }%>
+      <%= link_to "",user_path(user),class: "card-link"%>
+    </div>
+</div>
