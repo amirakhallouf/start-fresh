@@ -1,14 +1,56 @@
 // Specific CSS for your home-page
 .banner {
+  color: white;
   text-align: center;
-  padding: 20px;
-  margin: 50px;
-  line-height: 150%;
-  height: 90vh;
-  width: 100%;
-  border: 1px solid;
+  height: 100vh;
+  /* if you have a 70px navbar => height: calc(100vh - 70px); */
+  background-size: cover !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.banner h1 {
+  font-size: 50px;
+  font-weight: bold;
+  text-shadow: 0px 1px rgba(0, 0, 0, 0.2);
+}
+.banner p {
+  font-size: 25px;
+  font-weight: lighter;
+  color: rgb(255, 255, 255);
+  opacity: 0.6;
+  margin-bottom: 30px;
+}
+
+
+.about h3 {
+  font-size: 50px;
+  font-weight: bold;
+  color:$gray;
 
 }
+
+.about p {
+
+font-size: 25px;
+  font-weight: lighter;
+  color: $gray;
+  opacity: 0.6;
+  margin-bottom: 30px;
+}
+// .banner {
+//   text-align: center;
+//   padding: 20px;
+//   margin: 50px;
+//   line-height: 150%;
+//   height: 90vh;
+//   width: 100%;
+//   border: 1px solid;
+
+// }
+
+
+
 
 .banner h1 {
   color: $yellow;
@@ -33,14 +75,12 @@
   text-shadow: 0px 1px rgba(0, 0, 0, 0.2);
 }
 .quote p {
-  margin-bottom: 40px;
   font-size: 25px;
-  font-weight: lighter;
-  color: rgb(255, 255, 255);
-  opacity: 0.6;
-  text-align:center;
   font-weight: bold;
-  text-shadow: 1px 1px black;
+  color: $gray;
+  opacity: 0.6;
+  margin-bottom: 30px;
+
 
 }
 
