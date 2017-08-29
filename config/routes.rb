@@ -8,6 +8,7 @@ Rails.application.routes.draw do
 
   get 'job_search', to: 'pages#job_search', as: :job_search
   get 'profile', to: 'users#profile', as: :profile
+  get 'about', to: 'pages#about', as: :about
   get 'company_profile', to: 'companies#profile', as: :company_profile
   get 'my_job_applications', to: 'users#job_applications', as: :user_job_applications
 

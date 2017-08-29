@@ -3,7 +3,7 @@ class PagesController < ApplicationController
   #skip_before_action :authenticate_company!, only: [:home]
 
   def home
-    @job_offers = JobOffer.all
+    @users = User.all
   end
 
   def job_search
@@ -11,6 +11,7 @@ class PagesController < ApplicationController
   end
 
   def about
+
   end
 
 end
