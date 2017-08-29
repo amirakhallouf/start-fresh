@@ -4,13 +4,16 @@
   padding: 20px;
   margin: 50px;
   line-height: 150%;
+  height: 90vh;
+  width: 100%;
+  border: 1px solid;
+
 }
-/* .banner img {
-    height: 100px;
-  } */
+
 .banner h1 {
   color: $yellow;
 }
+
 .quote {
   color: white;
   text-align: center;
@@ -43,7 +46,7 @@
 
 body {
   background-color: white;
-  padding-bottom:50px;
+
 }
 
 .agenda-card {
