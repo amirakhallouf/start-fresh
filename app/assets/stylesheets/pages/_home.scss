@@ -49,8 +49,20 @@ font-size: 25px;
 // }
 
 
+.inspiration h5 {
+  font-size: 25px;
+  font-weight: lighter;
+  color: $gray;
+  opacity: 0.6;
+  margin-bottom: 30px;
+}
 
 
+.inspiration h3 {
+  font-size: 40px;
+  font-weight: bold;
+  color:$gray;
+}
 .banner h1 {
   color: $yellow;
 }
@@ -223,3 +235,4 @@ html {
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
 }
+
