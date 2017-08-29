@@ -1,15 +1,18 @@
   <div class="col-xs-12 col-md-4" >
-    <div class="card">
-      <div class="card-category"><%=user.name %></div>
-      <div class="card-description">
+    <div class="user-card">
+      <!-- <div class="top-pic"> -->
+        <% if user.picture.nil? %>
+          <% user.picture = "http://www.unsplash.it/50/50" %>
+        <% end %>
+        <%= image_tag user.picture, {class: "user-pic" }%>
+      <!-- </div> -->
+      <div class="user-card-category"><%=user.name %></div>
+      <div class="user-card-description">
         <h2><%= user.tag_line %></h2>
+        <p><strong>Skills:</strong> <%= user.skills %></p>
+        <p><strong>Education:</strong> <%= user.education %></p>
+        <p><strong>Bio:</strong> <%= user.bio %></p>
       </div>
-
-      <% if user.picture.nil? %>
-        <% user.picture = "http://www.unsplash.it/50/50" %>
-      <% end %>
-
-      <%= image_tag user.picture, {class: "card-user" }%>
-      <%= link_to "",user_path(user),class: "card-link"%>
+      <%= link_to "", user_path(user), class: "card-link"%>
     </div>
 </div>
