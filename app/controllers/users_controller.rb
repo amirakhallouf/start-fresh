@@ -1,5 +1,12 @@
 class UsersController < ApplicationController
 
+  def index
+    @users = User.all
+
+    @users = User.search_by_skills(params[:search]) if params[:search].present?
+
+  end
+
   def job_applications
     @user = current_user
     @applications = current_user.job_applications
@@ -18,8 +25,6 @@ class UsersController < ApplicationController
   def show
     @user= User.find(params[:id])
   end
-def index
-  @users = User.all
 
-end
+
 end
