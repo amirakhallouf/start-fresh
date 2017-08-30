@@ -24,11 +24,15 @@
             </div>
           <% end %>
         <% elsif company_signed_in? && @job_offer.company_id == current_company.id %>
-          <%= link_to "Edit", "", remote: true, class: "btn btn-success btn-margin" %>
-          <%= link_to "Close", "", remote: true, class: "btn btn-info btn-margin" %>
-          <%= link_to "Remove", "", remote: true, class: "btn btn-primary btn-margin" %>
+        <div class="content">
+            <%= link_to "Edit", "", remote: true, class: "btn btn-success btn-margin" %>
+            <%= link_to "Close", "", remote: true, class: "btn btn-info btn-margin" %>
+            <%= link_to "Remove", "", remote: true, class: "btn btn-primary btn-margin" %>
+          </div>
           <% else %>
+          <div class="content">
             <%= link_to "Apply to this Job Offer", new_user_registration_path, class: "btn btn-success btn-margin btn-big" %>
+          </div>
         <% end %>
       </div>
 
