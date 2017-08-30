@@ -21,15 +21,15 @@
     </div>
   </div>
   <hr style="width: 40%;height: 2px;
-    background-color: black; border-radius: 30px;">
+  background-color: black; border-radius: 30px;">
 
 
-<div class="illustrations">
-  <div class="row text-center">
-    <div class="col-xs-12 col-sm-4">
-      <i class="fa fa-building-o  fa-5x" aria-hidden="true"></i>
-      <p><strong>Companies</strong></p>
-      <h4>Offer professional opportunities to refugees</h4>
+  <div class="illustrations">
+    <div class="row text-center">
+      <div class="col-xs-12 col-sm-4">
+        <i class="fa fa-building-o  fa-5x" aria-hidden="true"></i>
+        <p><strong>Companies</strong></p>
+        <h4>Offer professional opportunities to refugees</h4>
       </div>
 
 
@@ -46,16 +46,16 @@
         <h4>Apply for the job offers without any need for a third party</h4>
 
 
-        </div>
-
-
       </div>
 
 
+    </div>
 
 
-    </div>
-    </div>
+
+
+  </div>
+</div>
 
 <!-- <div class="banner">
   <div class="row">
@@ -112,24 +112,29 @@
   </div>
 </div>
 -->
-<hr>
-
 <br>
 
-<div class="container">
-  <% @users.each do |user| %>
+<div class="protfolios">
+<div class="container text-center" style="background-color:#EDEDED;">
+<p>Change Makers</p>
+</div>
+  <div class="container text-center">
 
-  <%= render "users/user_card", user: user %>
 
-  <% end %>
+    <% @users.each do |user| %>
 
-  <!-- Large modal -->
-  <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
-    <div class="modal-dialog modal-lg" role="document">
-      <div class="modal-content">
+    <%= render "users/user_card", user: user %>
 
+    <% end %>
+
+    <!-- Large modal -->
+    <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+
+        </div>
       </div>
     </div>
-  </div>
 
-</div>
+  </div>
+  </div>
