@@ -8,7 +8,22 @@
   border-color: #e5e5e5;
   text-transform: width 1s;
 }
+.custom-portofolio {
+  height: 175px;
+  color: #23395B;
+  position: relative;
+  margin-top: 60px;
+  text-transform: width 1s;
+  border: none;
+}
 
+
+.info-portfolios p {
+  text-align:left;
+  font-size: 14px;
+  opacity: 0.7;
+  margin-top: 4;
+}
 .card-logo {
   position: absolute;
   left: 0px;
@@ -59,3 +74,46 @@
   width: 100%;
   z-index: 2;
 }
+
+
+
+.card-category-front-page {
+  padding-left: 30px;
+  position: absolute;
+  top: 3px;
+  left: 175px;
+  font-size: 15px;
+  height: 100%;
+  text-align: left;
+  line-height: 3pt;
+}
+
+.card-description-front-page {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.card-description-front-page h2, h3 {
+  font-size: 24px;
+  color:#ff715B;
+  width: 100%;
+
+}
+.card-description-front-page p {
+  font-size: 17px;
+  opacity: 0.7;
+  font-weight: bold;
+}
+
+.card-logo-front-page {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  height: 100%;
+  width: 175px;
+  background-size: cover;
+  background-position: 50% 50%;
+  border-radius: 50%;
+}
+

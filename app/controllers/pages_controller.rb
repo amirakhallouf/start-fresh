@@ -3,7 +3,7 @@ class PagesController < ApplicationController
   #skip_before_action :authenticate_company!, only: [:home]
 
   def home
-    @users = User.all
+    @users = User.where.not(name: nil)
   end
 
   def job_search
