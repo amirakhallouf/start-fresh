@@ -1,21 +1,24 @@
-<div class="card">
+<div class="custom-portofolio">
 
   <% if user.picture.url.nil? || user.picture.nil? %>
-    <% @picture = "http://cumbrianrun.co.uk/wp-content/uploads/2014/02/default-placeholder.png" %>
+  <% @picture = "http://cumbrianrun.co.uk/wp-content/uploads/2014/02/default-placeholder.png" %>
   <% else %>
-    <% @picture = user.picture %>
+  <% @picture = user.picture %>
   <% end %>
 
-  <div class="card-logo" style="background-image: url(<%= @picture %>)"></div>
+  <div class="card-logo-front-page" style="background-image: url(<%= @picture %>)"></div>
 
-  <div class="card-category">
-    <div class="card-description">
-    <p><%= user.name || "user" %></p>
-     <hr/>
-    <h2><%= user.tag_line %></h2>
-    <!-- <p><%= user.skills%></p> -->
+  <div class="card-category-front-page">
+    <div class="card-description-front-page">
+      <div class="info-portfolios">
+        <p><%= user.name %></p>
+        <h3><%= user.tag_line %></h3>
+        <hr>
+        <h2><%= user.skills %></h2>
 
-  </div>
+        <!-- <p><%= user.skills%></p> -->
+      </div>
+    </div>
   </div>
 
 
