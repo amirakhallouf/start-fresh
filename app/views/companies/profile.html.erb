@@ -3,14 +3,14 @@
     <div class="company-profile__left-column col-xs-12 col-md-4">
       <div class="company-profile__picture">
         <% if @company.picture.nil? %>
-          <%= image_tag @company.picture %>
+        <%= image_tag "http://cumbrianrun.co.uk/wp-content/uploads/2014/02/default-placeholder.png" %>
         <% else %>
-          <%= image_tag "http://cumbrianrun.co.uk/wp-content/uploads/2014/02/default-placeholder.png" %>
+          <%= image_tag @company.picture %>
         <% end %>
       </div>
       <div class="company-profile__details">
-        <span><i class="fa fa-briefcase"></i></span><h1><%= @company.name %></h1>
-        <span><i class="fa fa-map-pin"></i></span><h2><%= @company.location %></h2>
+        <h1><span><i class="fa fa-briefcase"></i></span> <%= @company.name %></h1>
+        <h2><span><i class="fa fa-map-pin"></i></span> <%= @company.location %></h2>
         <p><%# @company.description %></p>
       </div>
     </div>
