@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  devise_for :companies
+  devise_for :companies, controllers: { sessions: 'companies/sessions'}
   devise_for :users
   resources :users, only: [:show, :index]
   root to: 'pages#home'
