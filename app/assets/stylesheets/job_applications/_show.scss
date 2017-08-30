@@ -1,5 +1,7 @@
 #personal-motivation {
-  border: 1px solid $blue;
+  background: $light-gray;
+  padding: 30px;
+  margin-bottom: 100px;
 }
 
 .padded {
@@ -7,5 +9,7 @@
 }
 
 .app-red h3 {
-  color: $red;
+  color: $yellow;
+  text-align: center;
+  margin: 50px;
 }
