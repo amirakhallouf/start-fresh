@@ -12,7 +12,7 @@
     <div class="card-description">
     <p>Applicant</p>
     <h2><%= job_application.user.name %></h2>
-    <p><%= job_application.personal_motivation[0,50] %></p>
+    <p><%= job_application.personal_motivation[0,300] %></p>
     <% if controller_name == 'users' %>
       <p><%= job_application.status %></p>
     <% end %>

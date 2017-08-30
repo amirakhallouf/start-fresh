@@ -5,7 +5,7 @@
       <hr/>
       <div id="title" class="content">
         <%= simple_form_for [@job_offer, @job_application] do |f| %>
-        <p><%= f.input :personal_motivation, label: "Personal Motivation" %></p>
+        <p><%= f.input :personal_motivation, as: :text, label: "Personal Motivation" %></p>
         <%= f.button :submit, class: "btn btn-success"%>
         <% end %>
       </div>

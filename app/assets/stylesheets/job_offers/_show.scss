@@ -57,3 +57,14 @@ div .content {
     }
   }
 }
+
+.center {
+  display: flex;
+  justify-content: center;
+}
+
+.gray-div {
+  background: $light-gray;
+  padding: 20px;
+  width: 600px;
+}
