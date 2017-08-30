@@ -1,11 +1,25 @@
 <div class="card">
-  <div class="card-category">Applicant</div>
-  <div class="card-description">
-    <h2><%= job_application.user.name %></h2>
-    <p><%= job_application.personal_motivation %></p>
-  </div>
-  <% unless job_application.user.picture.nil? %>
-    <%= image_tag job_application.user.picture, { class: "card-user"} %>
+
+  <% if job_application.user.picture.url.nil? %>
+    <% @picture = "http://cumbrianrun.co.uk/wp-content/uploads/2014/02/default-placeholder.png" %>
+  <% else %>
+    <% @picture = job_application.user.picture %>
   <% end %>
-  <%= link_to "", job_application, class: "card-link"%>
+
+  <div class="card-logo" style="background-image: url(<%= @picture %>)"></div>
+
+  <div class="card-category">
+    <div class="card-description">
+    <p>Applicant</p>
+    <h2><%= job_application.user.name %></h2>
+    <p><%= job_application.personal_motivation[0,50] %></p>
+    <% if controller_name == 'users' %>
+      <p><%= job_application.status %></p>
+    <% end %>
+  </div>
+  </div>
+
+
+
+  <%= link_to "",job_application,class: "card-link"%>
 </div>
