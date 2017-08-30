@@ -115,17 +115,18 @@
 <br>
 
 <div class="protfolios">
-<div class="container text-center" style="background-color:#EDEDED;">
-<p>Change Makers</p>
-</div>
+  <div class="container text-center" style="background-color:#EDEDED;">
+    <p>Change Makers</p>
+  </div>
+
   <div class="container text-center">
-
-
+   <div class="row">
+        <div class="col-md-6 col-sm-6 ">
     <% @users.each do |user| %>
-
     <%= render "users/user_card", user: user %>
-
     <% end %>
+      </div>
+    </div>
 
     <!-- Large modal -->
     <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
@@ -137,4 +138,4 @@
     </div>
 
   </div>
-  </div>
+</div>
