@@ -1,11 +1,25 @@
-<div class="container">
-  <h1>Company Profile</h1>
-  <%= @company.name %>
-  <%= @company.email %>
-  <h4>Your job offers:</h4>
-  <% @job_offers.each do |job_offer| %>
-  <div class="col-xs-12">
-    <%= render 'job_offers/job_offer_card', job_offer: job_offer %>
+<div class="company-profile__wrapper wrapper">
+  <div class="company-profile__container container">
+    <div class="company-profile__left-column col-xs-12 col-md-4">
+      <div class="company-profile__picture">
+        <% if @company.picture.nil? %>
+          <%= image_tag @company.picture %>
+        <% else %>
+          <%= image_tag "http://cumbrianrun.co.uk/wp-content/uploads/2014/02/default-placeholder.png" %>
+        <% end %>
+      </div>
+      <div class="company-profile__details">
+        <span><i class="fa fa-briefcase"></i></span><h1><%= @company.name %></h1>
+        <span><i class="fa fa-map-pin"></i></span><h2><%= @company.location %></h2>
+        <p><%# @company.description %></p>
+      </div>
+    </div>
+    <div class="company-profile__right-column col-xs-12 col-md-8">
+      <div class="company-profile__job-offer">
+        <% @job_offers.each do |job_offer| %>
+          <%= render 'job_offers/job_offer_card', job_offer: job_offer %>
+        <% end %>
+      </div>
+    </div>
   </div>
-  <% end %>
 </div>
