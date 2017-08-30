@@ -51,7 +51,7 @@ font-size: 25px;
 
 .inspiration h5 {
   font-size: 25px;
-  font-weight: lighter;
+  font-weight: normal;
   color: $gray;
   opacity: 0.6;
   margin-bottom: 30px;
@@ -63,6 +63,24 @@ font-size: 25px;
   font-weight: bold;
   color:$gray;
 }
+
+.illustrations h4 {
+  font-size: 25px;
+  font-weight: normal;
+  color: $gray;
+  opacity: 0.6;
+  margin-bottom: 30px;
+
+}
+
+.illustrations p {
+  font-size: 25px;
+  font-weight: bold;
+  color: $gray;
+  opacity: 0.6;
+  margin-bottom: 30px;
+}
+
 .banner h1 {
   color: $yellow;
 }
