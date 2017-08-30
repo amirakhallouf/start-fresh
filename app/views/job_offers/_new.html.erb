@@ -1,11 +1,15 @@
-<div class="pop-up-content">
-  <font  color="#FF715B"><h2> New job offer </h2></font>
-  <div class ="new_offer">
-    <%= simple_form_for @job_offer do |f| %>
-      <%= f.input :title %>
-      <%= f.input :location %>
-      <%= f.input :description %>
-      <%= f.button :submit, "Create Job Offer", class: "btn btn-success btn-block" %>
-    <% end %>
+<div class="row">
+  <div class="col-md-6 col-md-offset-3 text-center">
+    <div class="pop-up-content">
+      <h2> New job offer </h2></font>
+      <div class ="new_offer">
+        <%= simple_form_for @job_offer do |f| %>
+          <%= f.input :title %>
+          <%= f.input :location %>
+          <%= f.input :description %>
+          <%= f.button :submit, "Create Job Offer", class: "btn btn-success btn-block" %>
+        <% end %>
+      </div>
+    </div>
   </div>
 </div>
