@@ -1,28 +1,22 @@
 .card {
   height: 175px;
-  background-size: cover !important;
-  background-position: center;
-  color:#23395B;
+  color: #23395B;
   position: relative;
   margin-top: 30px;
-  background-color:white;
   border: 1px solid;
-  border-radius: 5px;
+  border-radius: 2px;
   border-color: #e5e5e5;
-  text-transform:width 1s;
+  text-transform: width 1s;
 }
-.card:hover
-{
-  width:104%;
- margin-left: -10px;
-   box-shadow: 1px 1px #D3D3D3;
-}
+
 .card-logo {
   position: absolute;
-  right: 10px;
-  top: 10px;
-  width: 40px;
-  border-radius: 50%;
+  left: 0px;
+  top: 0px;
+  height: 100%;
+  width: 175px;
+  background-size: cover;
+  background-position: 50% 50%;
 }
 .card-user {
   position: absolute;
@@ -32,21 +26,25 @@
   border-radius: 50%;
 }
 .card-category {
+  padding-left: 30px;
   position: absolute;
-  top: 10px;
-  left: 10px;
+  top: 0px;
+  left: 175px;
   font-size: 15px;
-  text-transform: uppercase;
+  height: 100%;
 }
 
 .card-description {
-  position: absolute;
-  bottom: 10px;
-  left: 10px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .card-description h2 {
   font-size: 24px;
   color:#ff715B;
+  width: 100%;
+  margin-top: 0;
 }
 .card-description p {
   font-size: 14px;
@@ -60,9 +58,4 @@
   right: 0;
   width: 100%;
   z-index: 2;
-  background: black;
-  opacity: 0;
-}
-.card-link:hover {
-  opacity: 0.1;
 }
