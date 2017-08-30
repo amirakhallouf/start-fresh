@@ -9,6 +9,7 @@
         </button>
       </div>
     <% end %>
+    <br>
 
       <!-- <form action="index">
         <input type="text" class="searchTerm" placeholder="Search through our users" name="search">
@@ -18,7 +19,9 @@
       </form> -->
     </div>
   </div>
-
+  <hr>
+<div class="container text-center">
+     <h2 ><FONT FACE="Impact" SIZE="6" COLOR="#22395b">Change Makers</FONT>-<FONT FACE="Impact" SIZE="6" COLOR="#FF715B"> <%= @users.count  %> </FONT>-</h2>
   <div class="row">
     <ul>
       <% @users.each do |user| %>
@@ -26,4 +29,5 @@
       <% end %>
     </ul>
   </div>
+</div>
 </div>
