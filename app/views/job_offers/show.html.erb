@@ -20,7 +20,7 @@
           <% if @job_offer.job_applications.find_by(user: current_user).nil? %>
 
             <!-- Link to modal -->
-            <%= link_to "Apply to this Job Offer", new_job_offer_job_application_path(@job_offer), remote: true, class: "btn btn-success btn-margin" %>
+            <%= link_to "Apply to this Job Offer", new_job_offer_job_application_path(@job_offer), remote: true, class: "btn btn-success btn-margin btn-big" %>
           <% end %>
         <% elsif company_signed_in? && @job_offer.company_id == current_company.id %>
           <%= link_to "Edit", "", remote: true, class: "btn btn-success btn-margin" %>
