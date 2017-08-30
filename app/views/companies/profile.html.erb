@@ -12,6 +12,9 @@
         <h1><span><i class="fa fa-briefcase"></i></span> <%= @company.name %></h1>
         <h2><span><i class="fa fa-map-pin"></i></span> <%= @company.location %></h2>
         <p><%# @company.description %></p>
+        <%= link_to "Post a Job Offer", new_job_offer_path, remote: true, class: "btn btn-info" %>
+      </div>
+      <div>
       </div>
     </div>
     <div class="company-profile__right-column col-xs-12 col-md-8">
@@ -20,6 +23,12 @@
           <%= render 'job_offers/job_offer_card', job_offer: job_offer %>
         <% end %>
       </div>
+    </div>
+  </div>
+  <!-- Large modal -->
+  <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content"></div>
     </div>
   </div>
 </div>
