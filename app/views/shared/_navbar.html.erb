@@ -19,7 +19,6 @@
       <!-- Avatar with dropdown menu -->
       <div class="navbar-wagon-item">
         <div class="dropdown">
-          <!-- This line might be breaking because user pictures are not yet being uploaded to cloudinary -->
           <% if current_user.picture.nil? %>
             <%= image_tag "http://www.unsplash.it/50/50", class: "avatar dropdown-toggle", id: "navbar-wagon-menu", "data-toggle" => "dropdown"%>
           <% else %>

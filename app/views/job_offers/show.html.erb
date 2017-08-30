@@ -15,6 +15,7 @@
       </div>
 
       <div id="buttons" class="content">
+        <!-- Link to modal -->
         <% if user_signed_in? %>
           <% if @job_offer.job_applications.find_by(user: current_user).nil? %>
 
@@ -25,8 +26,9 @@
           <%= link_to "Edit", "", remote: true, class: "btn btn-success btn-margin" %>
           <%= link_to "Close", "", remote: true, class: "btn btn-warning btn-margin" %>
           <%= link_to "Remove", "", remote: true, class: "btn btn-danger btn-margin" %>
+          <% else %>
+          <%= link_to "Apply to this Job Offer", new_user_registration_path, class: "btn btn-success btn-margin btn-big" %>
         <% end %>
-        <%= link_to "Share on Facebook","", remote: true, class: "btn btn-primary btn-margin" %>
       </div>
 
       <div id="description" class="content">
