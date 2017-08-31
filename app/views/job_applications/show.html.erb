@@ -1,6 +1,10 @@
+<% content_for(:title_tag) do %>
+  DotAccess | <%= @job_application.job_offer.title %> | <%= @job_application.user.name %>
+<% end %>
+
 <div class="container">
       <div class="app-red">
-        <h3><%= @job_application.user.name %>'s application for '<%= @job_application.job_offer.title %>'</h3>
+        <h3><%= @job_application.user.name %>'s application for <%= @job_application.job_offer.title %></h3>
       </div>
     <div class="col-xs-8 col-xs-offset-2">
       <div id="personal-motivation" class="padded">
