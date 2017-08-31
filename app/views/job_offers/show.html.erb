@@ -1,3 +1,7 @@
+<% content_for(:title_tag) do %>
+  DotAccess | <%= @job_offer.company.name %> | <%= @job_offer.title %>
+<% end %>
+
 <div class="container">
   <div class="row">
     <div class="col-md-8 col-md-offset-2 text-center">
