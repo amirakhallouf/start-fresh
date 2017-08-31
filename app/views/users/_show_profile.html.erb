@@ -9,12 +9,12 @@
       <div class="row">
 
         <div class="col-xs-5">
-        <%= cl_image_tag @user.picture, height: 300, width: 400, crop: :fill %>
+        <%= cl_image_tag @user.picture, height: 300, width: 300, crop: :fill, gravity: :face, class: "user-avatar" %>
         </div>
 
         <div class="col-xs-7">
           <h3 class="my-3">Tag Line</h3>
-          <p>"Don't give me a fish. Teach me how to catch it".</p>
+          <p><%= current_user.tag_line %></p>
           <h3 class="my-3">Nationality</h3>
           <ul><li><%= @user.nationality %></li></ul>
           <h3 class="my-3">Contact Details</h3>
