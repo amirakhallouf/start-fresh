@@ -16,6 +16,6 @@ Rails.application.routes.draw do
     resources :job_applications, only: [:index, :new, :create]
   end
   resources :job_applications, only: [:show] do
-     patch 'accept_application', 'decline_application'
+     get 'accept_application', 'decline_application'
    end
 end

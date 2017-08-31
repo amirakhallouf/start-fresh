@@ -1,4 +1,4 @@
-<h3>Your current applicants: </h3>
+<h3>Your current applicants (<%= @job_offer.job_applications.count %>): </h3>
 <% if @job_offer.job_applications.empty? %>
   <p>There are no applicants for this offer yet.</p>
 <% else %>

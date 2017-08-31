@@ -6,12 +6,21 @@
       <div id="personal-motivation" class="padded">
         <h4>Personal Motivation:</h4>
         <p><%= @job_application.personal_motivation %></p>
-        <%= link_to "Contact Me", "", class: "btn btn-success" %>
+        <p><%= link_to "Contact Me", "", class: "btn btn-primary" %></p>
+        <% if company_signed_in? && @job_application.job_offer.company == current_company && @job_application.status == "Pending" %>
+            <%= link_to 'Accept', job_application_accept_application_path(@job_application), class: 'btn btn-success' %>
+            <%= link_to 'Decline', job_application_decline_application_path(@job_application), class: 'btn btn-danger' %>
+        <% else %>
+          <p><strong>Job Application Status: <%= @job_application.status %></strong></p>
+        <% end %>
       </div>
     </div>
   </div>
   <div class="profile">
-    <%= render 'users/show_profile' %>
+    <%= render 'users/show_profile', user: @job_application.user %>
   </div>
+
+
+
 
 </div>
