@@ -1,7 +1,7 @@
 <div class="container">
 
       <!-- Portfolio Item Heading -->
-      <h1 class="my-4"> <%= @user.name %>
+      <h1 class="my-4"> <%= user.name %>
         <!-- <small>Secondary Text</small> -->
       </h1>
 
@@ -9,28 +9,28 @@
       <div class="row">
 
         <div class="col-xs-5">
-        <%= cl_image_tag @user.picture, height: 300, width: 300, crop: :fill, gravity: :face, class: "user-avatar" %>
+        <%= cl_image_tag user.picture, height: 300, width: 300, crop: :fill, gravity: :face, class: "user-avatar" %>
         </div>
 
         <div class="col-xs-7">
           <h3 class="my-3">Tag Line</h3>
-          <p><%= current_user.tag_line %></p>
+          <p><%= user.tag_line %></p>
           <h3 class="my-3">Nationality</h3>
-          <ul><li><%= @user.nationality %></li></ul>
+          <ul><li><%= user.nationality %></li></ul>
           <h3 class="my-3">Contact Details</h3>
           <ul>
-            <li><%= @user.email %></li>
-            <li><%= @user.location %></li>
+            <li><%= user.email %></li>
+            <li><%= user.location %></li>
             </ul>
             <h3 class="my-3">Skills & Education</h3>
             <ul>
             <li><h4>Skills</h4></li>
-            <%= @user.skills %>
+            <%= user.skills %>
             <li><h4>Education</h4></li>
-            <%= @user.education %>
+            <%= user.education %>
             </ul>
             <h3 class="my-3">Short Bio</h3>
-             <%= @user.bio %>
+             <%= user.bio %>
         </div>
 
       </div>

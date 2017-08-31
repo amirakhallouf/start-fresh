@@ -24,6 +24,20 @@ class JobApplicationsController < ApplicationController
     end
   end
 
+  def accept_application
+    @job_application = JobApplication.find(params[:job_application_id])
+    @job_application.status = "Accepted"
+    @job_application.save
+    redirect_to @job_application.job_offer, notice: "Application accepted. Applicant informed."
+  end
+
+  def decline_application
+    @job_application = JobApplication.find(params[:job_application_id])
+    @job_application.status = "Declined"
+    @job_application.save
+    redirect_to @job_application.job_offer, notice: "Application declined. Applicant informed."
+  end
+
   private
 
   def job_application_params
