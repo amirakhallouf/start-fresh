@@ -1,0 +1,5 @@
+meta_product_name: "DotAccess"
+meta_title: "DotAccess - Linking Refugees with Professional Opportunities"
+meta_description: "DotAccess is an online platform that opens a direct communication channel bewteen refugees and companies. It'll enable them to have a smooth access to job markets and training opportunities in host countries as early as possible."
+meta_image: "yusra-cover.png"                       # should exist in `app/assets/images/`
+# twitter_account: "@product_twitter_account"   # required for Twitter Cards
