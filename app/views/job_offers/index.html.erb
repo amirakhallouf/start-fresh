@@ -2,6 +2,9 @@
   DotAccess | <%= params[:search]%> job offers
 <% end %>
 
+<% content_for :meta_title, "DotAccess | Job Offers for #{params[:search]}" %>
+<% content_for :meta_description, "Are you a refugee? Browse all the job offers posted by local companies who are looking for #{params[:search]." %>
+
 <div class="container">
   <div class="search">
     <div class="space_search">

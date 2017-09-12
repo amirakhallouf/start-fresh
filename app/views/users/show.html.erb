@@ -2,4 +2,8 @@
   DotAccess | <%= @user.name %>
 <% end %>
 
+<% content_for :meta_title, "#{@user.name}'s Profile on DotAccess" %>
+<% content_for :meta_description, @user.bio %>
+<% content_for :meta_image, cloudinary_url(@user.photo.path) %>
+
 <%= render 'show_profile', user: @user %>
