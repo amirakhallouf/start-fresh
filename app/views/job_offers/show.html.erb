@@ -2,6 +2,10 @@
   DotAccess | <%= @job_offer.company.name %> | <%= @job_offer.title %>
 <% end %>
 
+<% content_for :meta_title, "DotAccess | #{@job_offer.company.name} is looking for a #{ @job_offer.title}" %>
+<% content_for :meta_description, @job_offer.description %>
+<% content_for :meta_image, cloudinary_url(@@job_offer.company.photo.path) %>
+
 <div class="container">
   <div class="row">
     <div class="col-md-8 col-md-offset-2 text-center">
