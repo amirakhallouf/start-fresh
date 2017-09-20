@@ -4,7 +4,7 @@
 
 <% content_for :meta_title, "#{@user.name}'s Profile on DotAccess" %>
 <% content_for :meta_description, @user.bio %>
-<% content_for :meta_image, cloudinary_url(@user.photo.path) %>
+<% content_for :meta_image, cloudinary_url(@user.picture.path) %>
 
 <div class="container">
   <%= render 'tabs' %>
