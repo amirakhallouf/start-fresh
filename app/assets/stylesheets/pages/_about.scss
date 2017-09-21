@@ -1,0 +1,55 @@
+.about-contact {
+  background-color: $light-gray;
+  font-size: 20px;
+  text-align: center;
+  padding: 20px;
+}
+
+.about-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 210px;
+  img {
+    max-width: 90%;
+  }
+}
+
+h2 {
+  font-size: 30px;
+  text-align: center;
+  font-weight: bold;
+  text-shadow: 0px 1px rgba(0, 0, 0, 0.2);
+}
+
+.margin-bottom {
+  margin-bottom: 100px;
+}
+
+.fact {
+  color: white;
+  text-align: center;
+  display: flex;
+  margin: 180px 150px;
+  img {
+    width: 100%;
+  }
+  p {
+    font-size: 25px;
+    font-weight: bold;
+    color: $gray;
+    opacity: 0.6;
+  }
+}
+ .about-quote {
+  img {
+    width: 100%;
+  }
+  p {
+    vertical-align: center;
+    text-align: center;
+    font-size: 25px;
+    font-weight: lighter;
+    color: $blue;
+  }
+ }
