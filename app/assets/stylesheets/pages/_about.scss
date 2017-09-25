@@ -2,7 +2,7 @@
   background-color: $light-gray;
   font-size: 20px;
   text-align: center;
-  padding: 20px;
+  padding: 20px 40px;
 }
 
 .about-content {
@@ -53,3 +53,22 @@ h2 {
     color: $blue;
   }
  }
+
+
+.link-style {
+  font-weight: bold;
+  color: $blue;
+}
+
+.link-style:hover {
+  color: $yellow;
+  text-decoration: none;
+}
+
+.yellow {
+  color: $yellow;
+}
+
+.bold {
+  font-weight: bold;
+}
