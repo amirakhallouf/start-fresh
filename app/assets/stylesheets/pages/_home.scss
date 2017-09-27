@@ -64,8 +64,11 @@ font-size: 25px;
   color:$gray;
 }
 
+.inspiration-content {
+  padding: 60px;
+}
 
-.protfolios {
+.portfolios {
   font-size: 38px;
   font-weight: bold;
   color:$gray;
@@ -105,6 +108,7 @@ font-size: 25px;
   justify-content: center;
   margin-bottom:40px;
   min-height: 210px;
+  padding: 60px;
 }
 .quote h1 {
   font-size: 50px;
@@ -262,3 +266,26 @@ html {
     box-sizing: border-box;
 }
 
+@media only screen and (max-width: 480px) {
+  .inspiration {
+    margin: 40px;
+    min-height: 550px;
+  }
+  .quote {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    padding: 0px;
+    margin: 0px;
+    min-height: 550px;
+  }
+  .inspiration-content {
+    padding: 10px 20px;
+  }
+  .inspiration-content h3 {
+    font-size: 24px;
+  }
+  .inspiration-content h5 {
+    font-size: 20px;
+  }
+}
