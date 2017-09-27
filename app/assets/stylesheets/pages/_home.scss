@@ -96,6 +96,10 @@ font-size: 25px;
   color: $yellow;
 }
 
+.inspiration {
+  min-height: 600px;
+}
+
 .quote {
   color: white;
   text-align: center;
@@ -107,7 +111,7 @@ font-size: 25px;
   align-items: center;
   justify-content: center;
   margin-bottom:40px;
-  min-height: 210px;
+  min-height: 600px;
   padding: 60px;
 }
 .quote h1 {
@@ -266,18 +270,18 @@ html {
     box-sizing: border-box;
 }
 
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 365px) {
   .inspiration {
     margin: 40px;
-    min-height: 550px;
+    min-height: 650px;
   }
   .quote {
     display: flex;
     flex-direction: column;
     justify-items: center;
+    min-height: 650px;
     padding: 0px;
     margin: 0px;
-    min-height: 550px;
   }
   .inspiration-content {
     padding: 10px 20px;
@@ -287,5 +291,49 @@ html {
   }
   .inspiration-content h5 {
     font-size: 20px;
+  }
+}
+@media only screen and (min-width: 365px)and (max-width: 570px) {
+  .inspiration {
+    margin: 40px;
+    min-height: 550px;
+  }
+  .quote {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    min-height: 550px;
+    padding: 0px;
+    margin: 0px;
+  }
+  .inspiration-content {
+    padding: 10px 20px;
+  }
+  .inspiration-content h3 {
+    font-size: 24px;
+  }
+  .inspiration-content h5 {
+    font-size: 20px;
+  }
+}
+
+@media only screen and (min-width: 571px) and (max-width: 768px) {
+  .inspiration {
+    margin: 40px;
+    min-height: 500px;
+  }
+  .quote {
+    padding: 0px;
+    margin: 0px;
+    min-height: 500px;
+  }
+  .inspiration-content {
+    padding: 10px 20px;
+  }
+  .inspiration-content h3 {
+    font-size: 32px;
+  }
+  .inspiration-content h5 {
+    font-size: 24px;
   }
 }
