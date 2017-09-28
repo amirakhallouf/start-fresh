@@ -1,3 +1,7 @@
+body {
+  text-align: justify;
+}
+
 .about-contact {
   background-color: $light-gray;
   font-size: 20px;
@@ -71,4 +75,14 @@ h2 {
 
 .bold {
   font-weight: bold;
+}
+
+@media only screen and (max-width: 800px) {
+  .agenda-content {
+    padding: 0px 20px;
+  }
+
+  #agenda-container {
+    margin-bottom: 30px;
+  }
 }
