@@ -70,6 +70,11 @@ h2 {
   text-decoration: none;
 }
 
+.link-style:focus {
+  text-decoration: none;
+  color: $light-blue;
+}
+
 .yellow {
   color: $yellow;
 }
