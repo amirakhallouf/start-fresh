@@ -1,3 +1,7 @@
+body {
+  text-align: justify;
+}
+
 .about-contact {
   background-color: $light-gray;
   font-size: 20px;
@@ -5,7 +9,7 @@
   padding: 20px 40px;
 }
 
-.about-content {
+.about-wrapper {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -33,6 +37,7 @@ h2 {
   margin: 180px 150px;
   img {
     width: 100%;
+    vertical-align: center;
   }
   p {
     font-size: 25px;
@@ -65,10 +70,62 @@ h2 {
   text-decoration: none;
 }
 
+.link-style:focus {
+  text-decoration: none;
+  color: $light-blue;
+}
+
 .yellow {
   color: $yellow;
 }
 
 .bold {
   font-weight: bold;
+}
+
+@media only screen and (max-width: 991px) {
+  .agenda-content {
+    padding: 0px 30px;
+    font-size: 18px;
+  }
+  #agenda-container {
+    margin-bottom: 30px;
+  }
+  .fact {
+  margin: 0px 0px 30px 0px;
+    p {
+      text-align: justify;
+      padding: 30px;
+    }
+  }
+  .fact img {
+    height: 100px;
+    width: auto;
+  }
+}
+
+@media only screen and (min-width: 991px) and (max-width: 1199px) {
+  .fact {
+  margin: 80px;
+  }
+}
+
+@media only screen and (max-width: 1199px) {
+  .about-content {
+    padding: 30px;
+    font-size: 18px;
+  }
+  .about-wrapper{
+    margin-bottom: 30px;
+  }
+  .center-img {
+    text-align: center;
+  }
+  .about-quote {
+    padding: 30px;
+    p {
+    margin: 30px;
+    }
+    /* font-size: 18px; */
+  }
 }
