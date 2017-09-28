@@ -271,6 +271,11 @@ html {
 }
 
 @media only screen and (max-width: 365px) {
+  .banner {
+    height: 50vh;
+    background-position: 50% 50%;
+    /* font-size: 70%; */
+  }
   .inspiration {
     margin: 40px;
     min-height: 650px;
@@ -294,6 +299,10 @@ html {
   }
 }
 @media only screen and (min-width: 365px)and (max-width: 570px) {
+  .banner {
+    height: 60vh;
+    background-position: 50% 50%;
+  }
   .inspiration {
     margin: 40px;
     min-height: 550px;
@@ -318,6 +327,10 @@ html {
 }
 
 @media only screen and (min-width: 571px) and (max-width: 768px) {
+  .banner {
+    height: 70vh;
+    background-position: 50% 50%;
+  }
   .inspiration {
     margin: 40px;
     min-height: 500px;
@@ -335,5 +348,12 @@ html {
   }
   .inspiration-content h5 {
     font-size: 24px;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width:800px) {
+  .banner {
+    height: 70vh;
+    background-position: 50% 50%;
   }
 }
